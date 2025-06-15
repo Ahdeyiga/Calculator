@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Font, "Segoe UI", Roboto, sans-serif;
+  background: #2d2d2d;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.calculator {
+  background: #2d2d2d;
+  border-radius: 25px;
+  padding: 25px;
+  width: 100%;
+  max-width: 320px;
+  border: 10px solid #555; /* Light gray border */
+  border-radius: 30px; /* Rounded corners */
+  padding: 30px;
+  width: fit-content;
+  margin: 100px;
+  box-shadow: 0 0 0px rgba(0, 0, 0, 0.6); /* Soft outer shadow */
+  background-color: #1e1e1e; /* Optional: to make it distinct from page bg */
+}
+
+.display {
+  background: linear-gradient(135deg, #5b5fcd 0%, #4c4fb8 100%);
+  border-radius: 50px;
+  padding: 40px 25px;
+  margin-bottom: 25px;
+  text-align: right;
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: calc(5 * 65px + 4 * 15px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.display-text {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 300;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.operators-section {
+  display: contents;
+}
+
+.btn {
+  border: none;
+  width: 65px;
+  height: 65px;
+  font-size: 1.8rem;
+  font-weight: 400;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-user-select: none;
+  user-select: none;
+  color: white;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.btn-number {
+  background: #4a4a4a;
+  border-radius: 32px;
+}
+
+.btn-number:hover {
+  background: #5a5a5a;
+}
+
+.btn-operator {
+  background: #ff9500;
+  border-radius: 50%;
+}
+
+.btn-operator:hover {
+  background: #ffad33;
+}
+
+/* Special buttons styling */
+.btn-clear {
+  background: #4a4a4a;
+  border-radius: 32px;
+  color: white;
+}
+
+.btn-clear:hover {
+  background: #5a5a5a;
+}
+
+.btn-backspace {
+  background: #4a4a4a;
+  border-radius: px;
+  color: #;
+  font-size: 1.5rem;
+}
+
+.btn-backspace:hover {
+  background: #5a5a5a;
+}
+
+.btn-equals {
+  background: #a6a6a6;
+  color: #000;
+  border-radius: 32px;
+  grid-column: 4 / -1;
+  width: auto !important;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.btn-equals:hover {
+  background: #b8b8b8;
+}
+
+/* Decimal point button */
+.btn-dot {
+  background: #4a4a4a;
+  border-radius: 32px;
+}
+
+.btn-dot:hover {
+  background: #5a5a5a;
+}
+
+/* Responsive design */
+@media (max-width: 400px) {
+  .calculator {
+    padding: 20px;
+    max-width: 280px;
+  }
+
+  .btn {
+    width: 55px;
+    height: 55px;
+    font-size: 1.5rem;
+  }
+
+  .display {
+    width: calc(5 * 55px + 4 * 15px);
+  }
+
+  .display-text {
+    font-size: 2rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .calculator {
+    max-width: 350px;
+  }
+
+  .btn {
+    width: 75px;
+    height: 75px;
+    font-size: 2rem;
+  }
+
+  .display {
+    width: calc(5 * 75px + 4 * 15px);
+  }
+}
+
+.btn:focus {
+  outline: 2px solid #5b5fcd;
+  outline-offset: 2px;
+}
