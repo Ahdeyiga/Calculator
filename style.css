@@ -18,17 +18,16 @@ body {
   background: #2d2d2d;
   border-radius: 25px;
   padding: 25px;
-  width: 100%;
-  max-width: 320px;
-  border: 10px solid #555; /* Light gray border */
-  border-radius: 30px; /* Rounded corners */
-  padding: 30px;
+  background: #2d2d2d;
+  border-radius: 25px;
+  padding: 45px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: fit-content;
-  margin: 100px;
-  box-shadow: 0 0 0px rgba(0, 0, 0, 0.6); /* Soft outer shadow */
-  background-color: #1e1e1e; /* Optional: to make it distinct from page bg */
+  max-width: 100%;
 }
 
+ 
+  
 .display {
   background: linear-gradient(135deg, #5b5fcd 0%, #4c4fb8 100%);
   border-radius: 50px;
@@ -119,7 +118,7 @@ body {
 .btn-backspace {
   background: #4a4a4a;
   border-radius: px;
-  color: #;
+  color: #fff;
   font-size: 1.5rem;
 }
 
